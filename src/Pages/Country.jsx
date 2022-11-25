@@ -6,7 +6,6 @@ import GridLoader from "react-spinners/ClipLoader";
 import { Link } from "react-router-dom";
 
 function Country({ ligthTheme, handleTheme }) {
-  console.log(window.location.hash.split("/")[2]);
   let { result: country, loading } = useFetch(
     `https://restcountries.com/v2/alpha?codes=${
       window.location.hash.split("/")[2]
