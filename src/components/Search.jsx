@@ -9,7 +9,7 @@ function Search({
   handleReset,
 }) {
   return (
-    <div className="Search flex justify-between mt-10 px-10 ">
+    <div className="Search flex justify-between pt-10 px-10 ">
       <div
         className={`bg-white searchInput w-72 shadow-sm flex justify-center  items-center p-2.5 ${
           !ligthTheme && `bg-[#2b3945]`

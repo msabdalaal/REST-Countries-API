@@ -20,13 +20,12 @@ function App() {
   };
   return (
     <HashRouter>
+      <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
       <main
         className={`bg-[#fafafa] ${
           !ligthTheme && `bg-[#202c37]`
-        } min-h-screen select-none drag`}
+        } min-h-[calc(100vh-4rem)] select-none drag`}
       >
-        <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
-
         <Routes>
           <Route
             path="/"

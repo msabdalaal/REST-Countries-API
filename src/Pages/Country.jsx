@@ -19,11 +19,11 @@ function Country({ ligthTheme, handleTheme }) {
           !ligthTheme && `text-gray-100`
         }`}
       >
-        <div className="img lg:w-[40rem] mr-0 mb-10 lg:mr-10 lg:mb-0">
+        <div className="img lg:h-[30rem] mr-0 my-14 lg:mr-10 lg:mb-0">
           <img
             src={country.flags.svg}
             alt="Flag"
-            className="w-full  shadow-md"
+            className="h-full  shadow-md"
           />
         </div>
 
@@ -97,17 +97,17 @@ function Country({ ligthTheme, handleTheme }) {
     );
   });
   return (
-    <div className="min-h-screen">
+    <div className="pt-10">
       <Link
         to="/"
-        className={`shadow-md w-fit mt-10 ml-8 lg:ml-20 mb-20 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${
+        className={`shadow-md w-fit  ml-8 lg:ml-20 mb-15 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${
           !ligthTheme && `text-gray-100 bg-[#2b3945]`
         }`}
       >
         <IoIosArrowRoundBack className="" />
         Back
       </Link>
-      <div className="page w-full flex justify-center items-center p-8">
+      <div className="page w-full flex justify-center items-center">
         {!loading ? (
           <GridLoader
             className="w-full"

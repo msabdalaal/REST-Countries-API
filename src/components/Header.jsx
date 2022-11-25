@@ -2,7 +2,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 function Header({ ligthTheme, handleTheme }) {
   return (
     <header
-      className={`flex justify-between px-10 py-4 shadow-md bg-white ${
+      className={`flex justify-between px-10 h-16 items-center shadow-md bg-white ${
         !ligthTheme && `bg-[#2b3945]`
       }`}
     >
