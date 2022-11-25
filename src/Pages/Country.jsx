@@ -67,7 +67,7 @@ function Country({ ligthTheme, handleTheme }) {
           </div>
           <div className="flex justify-start items-center flex-wrap">
             <strong>Border Countries: </strong>
-            <ul>
+            <ul className="flex justify-start items-center flex-wrap">
               {country.borders ? (
                 country.borders.map((border) => {
                   return (
