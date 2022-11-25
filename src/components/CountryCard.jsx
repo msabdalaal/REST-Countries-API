@@ -5,14 +5,10 @@ function CountryCard({ country, ligthTheme }) {
         !ligthTheme && `text-gray-100 bg-[#2b3945]`
       }`}
     >
-      <div className="img h-52 w-full">
-        <img
-          src={country.flags.svg}
-          alt=""
-          className="h-full mb-8 rounded-t-md"
-        />
-      </div>
-
+      <div
+        className="img h-52 w-full bg-cover bg-center mb-4 rounded-t-md"
+        style={{ backgroundImage: `url(${country.flags.svg})` }}
+      ></div>
       <div className="info p-4 pb-8">
         <h2 className="font-bold text-xl mb-4">{country.name}</h2>
         <p>
