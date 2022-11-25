@@ -5,14 +5,14 @@ import Country from "./Pages/Country";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 
-const data = JSON.parse(window.localStorage.getItem("theme") || `true`);
+const data = JSON.parse(window.localStorage.getItem("REST_theme") || `true`);
 
 function App() {
   let [ligthTheme, setLigthTheme] = useState(data);
   useEffect(() => {}, []);
 
   useEffect(() => {
-    window.localStorage.setItem("theme", JSON.stringify(ligthTheme));
+    window.localStorage.setItem("REST_theme", JSON.stringify(ligthTheme));
   }, [ligthTheme]);
 
   let handleTheme = () => {
