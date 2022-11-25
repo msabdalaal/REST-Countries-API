@@ -67,26 +67,30 @@ function Country({ ligthTheme, handleTheme }) {
           </div>
           <div className="flex justify-start items-center flex-wrap">
             <strong>Border Countries: </strong>
-            {country.borders ? (
-              country.borders.map((border) => {
-                return (
-                  <button
-                    key={border}
-                    className={`p-2 rounded-md mb-2 bg-white shadow-sm mx-2 ${
-                      !ligthTheme && `bg-[#2b3945]`
-                    }`}
-                    onClick={() => {
-                      window.location.hash = `/country/${border}`;
-                      window.location.reload();
-                    }}
-                  >
-                    {border}
-                  </button>
-                );
-              })
-            ) : (
-              <p className="ml-4">None</p>
-            )}
+            <ul>
+              {country.borders ? (
+                country.borders.map((border) => {
+                  return (
+                    <li>
+                      <button
+                        key={border}
+                        className={`p-2 rounded-md mb-2 bg-white shadow-sm mx-2 ${
+                          !ligthTheme && `bg-[#2b3945]`
+                        }`}
+                        onClick={() => {
+                          window.location.hash = `/country/${border}`;
+                          window.location.reload();
+                        }}
+                      >
+                        {border}
+                      </button>
+                    </li>
+                  );
+                })
+              ) : (
+                <p className="ml-4">None</p>
+              )}
+            </ul>
           </div>
         </div>
       </div>
