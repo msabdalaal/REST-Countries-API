@@ -26,12 +26,9 @@ function Countries({ search, region, ligthTheme }) {
       let Content = countries.map((country) => {
         if (country.name.toLowerCase().match(search)) {
           return (
-            <a
-              key={country.name}
-              href={`/REST-Countries-API/country/${country.alpha3Code}`}
-            >
+            <Link key={country.name} to={`/country/${country.alpha3Code}`}>
               <CountryCard country={country} ligthTheme={ligthTheme} />
-            </a>
+            </Link>
           );
         }
       });

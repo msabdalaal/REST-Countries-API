@@ -91,15 +91,15 @@ function Country({ ligthTheme, handleTheme }) {
   return (
     <div className="min-h-screen">
       <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
-      <a
-        href="/"
+      <Link
+        to="/"
         className={`shadow-md w-fit mt-10 ml-8 lg:ml-20 mb-20 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${
           !ligthTheme && `text-gray-100 bg-[#2b3945]`
         }`}
       >
         <IoIosArrowRoundBack className="" />
         Back
-      </a>
+      </Link>
       <div className="page w-full flex justify-center items-center p-8">
         {!loading ? (
           <GridLoader
