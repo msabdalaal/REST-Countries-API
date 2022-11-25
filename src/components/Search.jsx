@@ -11,7 +11,7 @@ function Search({
   return (
     <div className="Search flex justify-between pt-10 px-10 ">
       <div
-        className={`bg-white searchInput w-72 shadow-sm flex justify-center  items-center p-2.5 ${
+        className={`bg-white searchInput md:w-72 lg:w-72 shadow-sm flex justify-center  items-center p-2.5 ${
           !ligthTheme && `bg-[#2b3945]`
         }`}
       >
@@ -43,7 +43,7 @@ function Search({
       <select
         name="selectRegion"
         id="countries"
-        className={`w-72 bg-white shadow-sm text-black text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:outline-0 ${
+        className={`md:w-72 lg:w-72 ml-4 bg-white shadow-sm text-black text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:outline-0 ${
           !ligthTheme && `bg-[#2b3945] text-gray-200`
         }`}
         onChange={(e) => handleRegion(e)}

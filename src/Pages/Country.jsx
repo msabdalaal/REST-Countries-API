@@ -19,7 +19,7 @@ function Country({ ligthTheme, handleTheme }) {
           !ligthTheme && `text-gray-100`
         }`}
       >
-        <div className="img lg:h-[30rem] mr-0 my-14 lg:mr-10 lg:mb-0">
+        <div className="img lg:h-[30rem] px-4 my-14 lg:mr-10 lg:mb-0">
           <img
             src={country.flags.svg}
             alt="Flag"
@@ -27,44 +27,43 @@ function Country({ ligthTheme, handleTheme }) {
           />
         </div>
 
-        <div className="w-fit">
+        <div className="w-fit p-4">
           <h1 className={`font-bold text-2xl mb-10`}>{country.name}</h1>
-          <div className="info grid grid-cols-2 gap-4 font-normal mb-10">
-            <ul>
-              <li>
-                <strong>Native Name: </strong>
-                {country.nativeName}
-              </li>
-              <li>
-                <strong>Population: </strong>
-                {country.population}
-              </li>
-              <li>
-                <strong>Region: </strong>
-                {country.region}
-              </li>
-              <li>
-                <strong>Sub Region: </strong>
-                {country.subregion}
-              </li>
-              <li>
-                <strong>Capital: </strong>
-                {country.capital}
-              </li>
-              <li>
-                <strong>Top Level Domain: </strong>
-                {country.topLevelDomain}
-              </li>
-              <li>
-                <strong>Currency: </strong>
-                {country.currencies[0].code}
-              </li>
-              <li>
-                <strong>Languages: </strong>
-                {country.languages[0].name}
-              </li>
-            </ul>
-          </div>
+          <ul className="info grid grid-cols-2 gap-4 font-normal mb-10">
+            <li>
+              <strong>Native Name: </strong>
+              {country.nativeName}
+            </li>
+            <li>
+              <strong>Population: </strong>
+              {country.population}
+            </li>
+            <li>
+              <strong>Region: </strong>
+              {country.region}
+            </li>
+            <li>
+              <strong>Sub Region: </strong>
+              {country.subregion}
+            </li>
+            <li>
+              <strong>Capital: </strong>
+              {country.capital}
+            </li>
+            <li>
+              <strong>Top Level Domain: </strong>
+              {country.topLevelDomain}
+            </li>
+            <li>
+              <strong>Currency: </strong>
+              {country.currencies[0].code}
+            </li>
+            <li>
+              <strong>Languages: </strong>
+              {country.languages[0].name}
+            </li>
+          </ul>
+
           <div className="flex justify-start items-center flex-wrap">
             <strong>Border Countries: </strong>
             <ul className="flex justify-start items-center flex-wrap">
@@ -100,7 +99,7 @@ function Country({ ligthTheme, handleTheme }) {
     <div className="pt-10">
       <Link
         to="/"
-        className={`shadow-md w-fit  ml-8 lg:ml-20 mb-15 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${
+        className={`shadow-md w-fit  ml-4 lg:ml-20 mb-15 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${
           !ligthTheme && `text-gray-100 bg-[#2b3945]`
         }`}
       >
