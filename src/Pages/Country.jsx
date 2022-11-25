@@ -70,16 +70,18 @@ function Country({ ligthTheme, handleTheme }) {
             {country.borders ? (
               country.borders.map((border) => {
                 return (
-                  <Link
+                  <button
                     key={border}
                     className={`p-2 rounded-md mb-2 bg-white shadow-sm mx-2 ${
                       !ligthTheme && `bg-[#2b3945]`
                     }`}
-                    to={`/country/${border}`}
-                    target="_blank"
+                    onClick={() => {
+                      window.location.hash = `/country/${border}`;
+                      window.location.reload();
+                    }}
                   >
                     {border}
-                  </Link>
+                  </button>
                 );
               })
             ) : (
