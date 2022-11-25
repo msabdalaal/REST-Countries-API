@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Pages/Home";
 import Country from "./Pages/Country";
 import { useEffect, useState } from "react";
+import Header from "./components/Header";
 
 const data = JSON.parse(window.localStorage.getItem("theme") || `true`);
 
@@ -24,6 +25,8 @@ function App() {
           !ligthTheme && `bg-[#202c37]`
         } min-h-screen select-none drag`}
       >
+        <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
+
         <Routes>
           <Route
             path="/"

@@ -31,38 +31,40 @@ function Country({ ligthTheme, handleTheme }) {
         <div className="w-fit">
           <h1 className={`font-bold text-2xl mb-10`}>{country.name}</h1>
           <div className="info grid grid-cols-2 gap-4 font-normal mb-10">
-            <p>
-              <strong>Native Name: </strong>
-              {country.nativeName}
-            </p>
-            <p>
-              <strong>Population: </strong>
-              {country.population}
-            </p>
-            <p>
-              <strong>Region: </strong>
-              {country.region}
-            </p>
-            <p>
-              <strong>Sub Region: </strong>
-              {country.subregion}
-            </p>
-            <p>
-              <strong>Capital: </strong>
-              {country.capital}
-            </p>
-            <p>
-              <strong>Top Level Domain: </strong>
-              {country.topLevelDomain}
-            </p>
-            <p>
-              <strong>Currency: </strong>
-              {country.currencies[0].code}
-            </p>
-            <p>
-              <strong>Languages: </strong>
-              {country.languages[0].name}
-            </p>
+            <ul>
+              <li>
+                <strong>Native Name: </strong>
+                {country.nativeName}
+              </li>
+              <li>
+                <strong>Population: </strong>
+                {country.population}
+              </li>
+              <li>
+                <strong>Region: </strong>
+                {country.region}
+              </li>
+              <li>
+                <strong>Sub Region: </strong>
+                {country.subregion}
+              </li>
+              <li>
+                <strong>Capital: </strong>
+                {country.capital}
+              </li>
+              <li>
+                <strong>Top Level Domain: </strong>
+                {country.topLevelDomain}
+              </li>
+              <li>
+                <strong>Currency: </strong>
+                {country.currencies[0].code}
+              </li>
+              <li>
+                <strong>Languages: </strong>
+                {country.languages[0].name}
+              </li>
+            </ul>
           </div>
           <div className="flex justify-start items-center flex-wrap">
             <strong>Border Countries: </strong>
@@ -90,7 +92,6 @@ function Country({ ligthTheme, handleTheme }) {
   });
   return (
     <div className="min-h-screen">
-      <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
       <Link
         to="/"
         className={`shadow-md w-fit mt-10 ml-8 lg:ml-20 mb-20 bg-white rounded-md px-6 py-5 h-4 flex justify-center items-center ${

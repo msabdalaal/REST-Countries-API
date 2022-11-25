@@ -20,19 +20,30 @@ function Countries({ search, region, ligthTheme }) {
     );
   });
   function Content({ ligthTheme }) {
+    let counter = 0;
     if (search == "") {
       return countryCards;
     } else {
       let Content = countries.map((country) => {
         if (country.name.toLowerCase().match(search)) {
+          counter++;
           return (
             <Link key={country.name} to={`/country/${country.alpha3Code}`}>
               <CountryCard country={country} ligthTheme={ligthTheme} />
             </Link>
           );
+        } else {
+          return null;
         }
       });
-      return Content;
+      console.log(counter);
+      return counter == 0 ? (
+        <h1 className={`${!ligthTheme && `text-gray-100`} text-2xl`}>
+          No Results
+        </h1>
+      ) : (
+        Content
+      );
     }
   }
   return (

@@ -9,18 +9,21 @@ function Home({ handleTheme, ligthTheme }) {
   function handleSearch(e) {
     setSearch((prev) => e.target.value);
   }
+  function handleReset() {
+    setSearch("");
+  }
   function handleRegion(e) {
     setRegion((prev) => e.target.value);
   }
   return (
     <div className="Home min-h-screen">
-      <Header ligthTheme={ligthTheme} handleTheme={handleTheme} />
       <Search
         handleSearch={handleSearch}
         search={search}
         region={region}
         handleRegion={handleRegion}
         ligthTheme={ligthTheme}
+        handleReset={handleReset}
       />
       <Countries search={search} region={region} ligthTheme={ligthTheme} />
     </div>

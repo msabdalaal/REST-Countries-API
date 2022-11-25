@@ -6,4 +6,8 @@
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   -webkit-user-drag: none;
+  list-style-type: none;
+}
+body {
+  transition: all ease-in-out 0.3s;
 }

@@ -1,6 +1,13 @@
 import { FaSearch } from "react-icons/fa";
+import { BiReset } from "react-icons/bi";
 
-function Search({ handleSearch, search, handleRegion, ligthTheme }) {
+function Search({
+  handleSearch,
+  search,
+  handleRegion,
+  ligthTheme,
+  handleReset,
+}) {
   return (
     <div className="Search flex justify-between mt-10 px-10 ">
       <div
@@ -23,6 +30,12 @@ function Search({ handleSearch, search, handleRegion, ligthTheme }) {
           onChange={(e) => handleSearch(e)}
           value={search}
         />
+        <button
+          className={`${!ligthTheme && `text-gray-100`}`}
+          onClick={handleReset}
+        >
+          <BiReset className="scale-110" />
+        </button>
       </div>
       <label htmlFor="countries"></label>
       <select
@@ -34,7 +47,7 @@ function Search({ handleSearch, search, handleRegion, ligthTheme }) {
         onChange={(e) => handleRegion(e)}
       >
         <option defaultValue value="">
-          Filter by Region
+          All Regions
         </option>
         <option value="Africa">Africa</option>
         <option value="Americas">America</option>
