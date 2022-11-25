@@ -9,7 +9,10 @@ function Countries({ search, region, ligthTheme }) {
   console.log(loading);
   let countryCards = countries.map((country) => {
     return (
-      <a key={country.name} href={`/country/${country.alpha3Code}`}>
+      <a
+        key={country.name}
+        href={`/REST-Countries-API/country/${country.alpha3Code}`}
+      >
         <CountryCard
           key={country.name}
           country={country}
@@ -25,7 +28,10 @@ function Countries({ search, region, ligthTheme }) {
       let Content = countries.map((country) => {
         if (country.name.toLowerCase().match(search)) {
           return (
-            <a key={country.name} href={`/country/${country.alpha3Code}`}>
+            <a
+              key={country.name}
+              href={`/REST-Countries-API/country/${country.alpha3Code}`}
+            >
               <CountryCard country={country} ligthTheme={ligthTheme} />
             </a>
           );
