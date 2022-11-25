@@ -30,12 +30,14 @@ function Search({
           onChange={(e) => handleSearch(e)}
           value={search}
         />
-        <button
-          className={`${!ligthTheme && `text-gray-100`}`}
-          onClick={handleReset}
-        >
-          <BiReset className="scale-110" />
-        </button>
+        {search && (
+          <button
+            className={`${!ligthTheme && `text-gray-100`}`}
+            onClick={handleReset}
+          >
+            <BiReset className="scale-110" />
+          </button>
+        )}
       </div>
       <label htmlFor="countries"></label>
       <select
