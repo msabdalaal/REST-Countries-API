@@ -1,7 +1,11 @@
 import { FaMoon, FaSun } from "react-icons/fa";
 function Header({ ligthTheme, handleTheme }) {
   return (
-    <header className="flex justify-between px-10 py-4 shadow-md">
+    <header
+      className={`flex justify-between px-10 py-4 shadow-md bg-white ${
+        !ligthTheme && `bg-[#2b3945]`
+      }`}
+    >
       <h1 className={`font-bold text-2xl ${!ligthTheme && `text-gray-100`}`}>
         Where in the world?
       </h1>

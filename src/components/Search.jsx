@@ -26,6 +26,7 @@ function Search({ handleSearch, search, handleRegion, ligthTheme }) {
       </div>
       <label htmlFor="countries"></label>
       <select
+        name="selectRegion"
         id="countries"
         className={`w-72 bg-white shadow-sm text-black text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block p-2.5 focus:outline-0 ${
           !ligthTheme && `bg-[#2b3945] text-gray-200`
