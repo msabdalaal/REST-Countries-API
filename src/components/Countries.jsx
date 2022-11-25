@@ -1,6 +1,7 @@
 import useFetch from "../Hook/useFetch";
 import CountryCard from "./CountryCard";
 import GridLoader from "react-spinners/ClipLoader";
+import { Link } from "react-router-dom";
 
 function Countries({ search, region, ligthTheme }) {
   let { result: countries, loading } = useFetch(
@@ -9,16 +10,13 @@ function Countries({ search, region, ligthTheme }) {
   console.log(loading);
   let countryCards = countries.map((country) => {
     return (
-      <a
-        key={country.name}
-        href={`/REST-Countries-API/country/${country.alpha3Code}`}
-      >
+      <Link key={country.name} to={`/country/${country.alpha3Code}`}>
         <CountryCard
           key={country.name}
           country={country}
           ligthTheme={ligthTheme}
         />
-      </a>
+      </Link>
     );
   });
   function Content({ ligthTheme }) {

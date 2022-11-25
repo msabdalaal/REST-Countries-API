@@ -5,9 +5,10 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import GridLoader from "react-spinners/ClipLoader";
 
 function Country({ ligthTheme, handleTheme }) {
+  console.log(window.location.hash.split("/")[2]);
   let { result: country, loading } = useFetch(
     `https://restcountries.com/v2/alpha?codes=${
-      window.location.pathname.split("/")[3]
+      window.location.hash.split("/")[2]
     }`
   );
 
