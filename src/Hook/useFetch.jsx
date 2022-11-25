@@ -6,7 +6,10 @@ function useFetch(url) {
 
   useEffect(() => {
     fetch(url)
-      .then((data) => data.json())
+      .then((data) => {
+        setLoading(false);
+        return data.json();
+      })
       .then((e) => {
         setResult(e);
         setLoading(true);

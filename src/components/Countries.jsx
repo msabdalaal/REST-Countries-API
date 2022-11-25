@@ -7,7 +7,6 @@ function Countries({ search, region, ligthTheme }) {
   let { result: countries, loading } = useFetch(
     `https://restcountries.com/v2/${region == "" ? "all" : `region/${region}`}`
   );
-  console.log(loading);
   let countryCards = countries.map((country) => {
     return (
       <Link key={country.name} to={`/country/${country.alpha3Code}`}>
