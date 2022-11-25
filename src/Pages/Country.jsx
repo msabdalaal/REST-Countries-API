@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import useFetch from "../Hook/useFetch";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import GridLoader from "react-spinners/ClipLoader";
@@ -71,15 +70,16 @@ function Country({ ligthTheme, handleTheme }) {
             {country.borders ? (
               country.borders.map((border) => {
                 return (
-                  <a
+                  <Link
                     key={border}
                     className={`p-2 rounded-md mb-2 bg-white shadow-sm mx-2 ${
                       !ligthTheme && `bg-[#2b3945]`
                     }`}
-                    href={`/country/${border}`}
+                    to={`/country/${border}`}
+                    target="_blank"
                   >
                     {border}
-                  </a>
+                  </Link>
                 );
               })
             ) : (

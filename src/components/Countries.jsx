@@ -25,7 +25,7 @@ function Countries({ search, region, ligthTheme }) {
       return countryCards;
     } else {
       let Content = countries.map((country) => {
-        if (country.name.toLowerCase().match(search)) {
+        if (country.name.toLowerCase().match(search.toLowerCase())) {
           counter++;
           return (
             <Link key={country.name} to={`/country/${country.alpha3Code}`}>
