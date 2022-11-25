@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import useFetch from "../Hook/useFetch";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import GridLoader from "react-spinners/ClipLoader";
+import { Link } from "react-router-dom";
 
 function Country({ ligthTheme, handleTheme }) {
   console.log(window.location.hash.split("/")[2]);
